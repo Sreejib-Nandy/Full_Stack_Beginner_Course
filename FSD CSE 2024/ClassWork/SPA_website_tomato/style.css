@@ -1,0 +1,346 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html body {
+  overflow-x: hidden;
+}
+
+.banner {
+  /* padding-top:100px;  */
+  padding-top: clamp(40px, 6vh, 100px);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #009687),
+    url("images/banner.avif"); /* 0 -transparent, 1 -black */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  /* width:100vw; */
+  width: 100%;
+}
+
+.logo {
+  /* width: 140px; */
+  width: clamp(100px, 20vw, 140px);
+  height: auto;
+  cursor: pointer;
+}
+
+.navbar {
+  background-color: #00544c;
+  position: fixed; /* Make the navbar fixed */
+  top: 0; /* Stick the navbar to the top */
+  left: 0; /* Align it with the left edge */
+  width: 100%;
+  /* padding: 0 20px; */
+  padding: 0.8vh clamp(12px, 3vw, 24px);
+  z-index: 1000; /* Make sure the navbar stays on top of other content */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style: none; /* Remove default list style */
+  display: flex;
+}
+.navbar ul li {
+  /* margin: 0 20px; */
+  margin: 0 clamp(8px, 2.5vw, 20px);
+  position: relative;
+}
+.navbar ul li::after {
+  content: "";
+  height: clamp(2px, 0.3vw, 3px);
+  width: 0%;
+  background-color: #009688;
+  position: absolute;
+  left: 0;
+  bottom: clamp(-6px, -1vh, -10px);
+  transition: width 0.6s;
+}
+.navbar ul li:hover::after {
+  width: 100%;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+}
+.banner-text {
+  text-align: center;
+  color: white;
+  /* padding-top: 20vh; */
+  padding-top: clamp(80px, 20vh, 160px);
+}
+.banner-text h1 {
+  /* font-size: 80px; */
+  font-size: clamp(32px, 8vw, 80px);
+  font-family: "Dancing Script", cursive;
+}
+.banner-text p {
+  /* font-size: 20px; */
+  font-size: clamp(16px, 3vw, 20px);
+  font-style: italic;
+  font-family: "Dancing Script", cursive;
+}
+.banner-btn {
+  /* background-color: white;  */
+  margin: 70px;
+  text-align: center;
+}
+.banner-btn a {
+  /* background-color: green; */
+  text-align: center;
+  width: 150px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  padding: 12px;
+  color: white;
+  border: 0.5px solid white;
+  transition: background-color 1s;
+}
+.banner-btn a:hover {
+  background-color: white;
+  color: black;
+}
+
+.services {
+  margin: 0 auto;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 1), #009688);
+  font-size: clamp(16px, 1.5vw, 18px);
+  width: 100%;
+  height: 100vh;
+  padding-top: clamp(40px, 8vh, 100px);
+}
+
+.services .service-title {
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(24px, 5vw, 40px);
+  text-align: center;
+}
+.services .service-title span {
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  color: blue;
+}
+.services .service-top p {
+  margin-top: 5px;
+  padding: 20px;
+}
+.services .service-bottom {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap; /* Allow items to wrap if they don't fit */
+  gap: clamp(12px, 2.5vw, 20px);
+  padding: 0 clamp(12px, 3vw, 20px);
+  margin: 0 auto; /* Center the service section */
+  width: 90vw; /* Ensure content doesn't exceed viewport */
+}
+.services .service-bottom .service-item {
+  margin-top: clamp(24px, 10vh, 100px);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+.service-item .icon-and-title {
+  display: flex;
+  align-items: center;
+}
+.service-item .icon {
+  margin-right: 15px; /* Add some spacing between the icon and the h2 */
+}
+
+.service-item h2 {
+  font-size: 24px;
+}
+
+.testimonials {
+    margin: 0 auto;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 1), #009688);
+    font-size: clamp(16px, 1.5vw, 18px);
+    width:100%;
+    height:100vh; 
+    padding-top:clamp(40px, 8vh, 100px);;
+}
+
+.testimonials .testimonials-title{
+    font-family: "Dancing Script", cursive;
+    font-size: clamp(24px, 5vw, 40px);
+    text-align: center;
+}
+.testimonials .testimonials-title span{
+    font-family: "Dancing Script", cursive;
+    font-weight: bold;
+    color: blue;
+}
+.testimonials .testimonials-top p{
+    margin-top: clamp(5px, 1vw, 15px);
+    padding: clamp(12px, 3vw, 20px);
+}
+.testimonials .testimonials-bottom{
+    display:flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width:85vw;
+    margin:0 auto;
+}
+.testimonials .testimonials-bottom .testimonial-card {
+    background: rgba(255, 255, 255, 0.1);
+    margin-top: clamp(40px, 8vw, 100px);
+    border-radius: clamp(12px, 2vw, 20px);
+    padding: clamp(12px, 2vw, 20px);
+    width: clamp(280px, 25vw, 420px);
+    text-align: center;
+    box-shadow: 0 4px clamp(6px, 1vw, 12px) rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255. 0.1);
+    transition: transform 0.4s ease, 
+                box-shadow 0.4s ease, 
+                border-color 0.4s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-15px) scale(1.05); /* Lift and scale on hover */
+}
+
+.testimonial-card img {
+    width: clamp(70px, 10vw, 100px);
+    height: clamp(70px, 10vw, 100px);
+    border-radius: 50%; /* Always stays perfectly circular */
+    border: clamp(2px, 0.6vw, 4px) solid rgba(255, 255, 255, 0.5);
+    margin-bottom: clamp(16px, 4vw, 30px);
+}
+.testimonial-card h3 {
+    color: white;
+    background: rgb(0, 150, 136);
+    padding: clamp(6px, 1.6vw, 10px);
+    border-radius: clamp(6px, 1.4vw, 10px);
+    font-size: clamp(1rem, 2.2vw, 1.4rem);
+}
+.testimonial-card p {
+    padding: clamp(12px, 3vw, 20px);
+    font-size: clamp(14px, 2.2vw, 16px);
+    font-style: italic;
+    color: white;
+}
+.contact {
+    margin: 0 auto;
+    color: white;
+    font-size: clamp(16px, 1.5vw, 18px);
+    width:100%;
+    height:100vh; 
+    padding-top:clamp(40px, 8vh, 100px);;
+    background: linear-gradient(rgba(255,255,255,0.1), #009687 ), url("images/contactuspage.jpg");
+}
+.contact .contact-top h2{
+    font-family: "Dancing Script", cursive;
+    font-size: clamp(24px, 5vw, 40px);
+    text-align: center;
+}
+.contact .contact-top h2 span{
+    font-family: "Dancing Script", cursive;
+    font-weight: bold;
+    color: blue;
+}
+.contact .contact-top p{
+    margin-top: clamp(5px, 1vw, 15px);
+    padding: clamp(12px, 3vw, 20px);
+}
+.contact .contact-bottom{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:70%;
+    margin:5px auto;
+}
+.contact-bottom .contactinfo{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+}
+.contact-bottom .contactinfo .box{
+    margin: 8px;
+    padding: clamp(12px, 2vw, 20px) 0;
+    display: flex;
+}
+.contact-bottom .contactinfo .box .icon{
+    width: clamp(44px, 6vw, 60px);
+    height: clamp(44px, 6vw, 60px);
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.contact-bottom .contactinfo .box .text{
+    display: flex;
+    flex-direction: column;
+    margin-left: clamp(12px, 3vw, 20px);
+    font-size: clamp(14px, 2vw, 16px);
+    color: #fff;
+}
+.contact-bottom .contactinfo .box .text h3{
+    color: white;
+    margin-bottom: clamp(6px, 1.5vw, 10px);
+}
+.contactform{
+    width:  50%;
+    padding: clamp(20px, 5vw, 40px);
+    background: #fff;
+}
+.contactform h2{
+    font-size: clamp(22px, 4vw, 30px);
+    color: #333;
+    font-weight: 500;
+}
+.contactform .inputbox{
+    position: relative;
+    width: 100%;
+    margin-top: clamp(6px, 2vw, 10px);
+}
+.contactform .inputbox input,
+.contactform .inputbox textarea{
+    width: 100%;
+    padding: clamp(4px, 1vw, 5px) 0;
+    font-size: clamp(14px, 2vw, 16px);
+    margin: clamp(6px, 2vw, 10px) 0;
+    border: none;
+    border-bottom: clamp(1.5px, 0.4vw, 2px) solid #333;
+    outline: none;
+    resize: none;
+}
+.contactform .inputbox span{
+    position: absolute;
+    left: 0;
+    padding: clamp(4px, 1vw, 5px) 0;
+    font-size: clamp(14px, 2vw, 16px);
+    margin: clamp(6px, 2vw, 10px) 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactform .inputbox input:focus ~ span,
+.contactform .inputbox input:valid ~ span,
+.contactform .inputbox textarea:focus ~ span,
+.contactform .inputbox textarea:valid ~ span{
+    color: #e91e63;
+    font-size: clamp(11px, 1.8vw, 12px);
+    transform: translateY(clamp(-14px, -3vw, -20px));
+}
+.contactform .inputbox input[type="submit"]{
+    width: clamp(90px, 25vw, 120px);
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: clamp(8px, 2.5vw, 10px);
+    font-size: clamp(16px, 3vw, 18px);
+}

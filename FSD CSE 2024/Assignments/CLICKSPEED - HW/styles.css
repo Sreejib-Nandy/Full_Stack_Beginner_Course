@@ -1,0 +1,55 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#click-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+#time-btn:disabled {
+    background: #ebe7e7;
+    cursor: not-allowed;
+}
+
+#time-btn {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#usertime {
+    width : 200px;
+    padding: 10px 8px;
+    margin: 3px;
+    font-size: 16px;
+    border: 1px solid #1e1d1d;
+    border-radius: 5px;
+}
+
+#box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

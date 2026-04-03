@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Speed Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Click Speed Test</h1>
+        <p id='message'></p>
+        <div id="box">
+            <input type="number" min="1" max="100" id="usertime" placeholder="Enter the time (seconds)">
+            <button id="time-btn">Enter</button>
+        </div>
+        <button id="click-btn">Click Me!</button>
+        <p>Clicks: <span id="click-count">0</span></p>
+        <p id="result"></p>
+        <button id="start-btn">Start Test</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
