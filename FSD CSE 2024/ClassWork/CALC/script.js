@@ -3,6 +3,7 @@ document.querySelectorAll('.btn').forEach((button) => {
         const display = document.querySelector('#display');
         const value = button.getAttribute('data-value');
 
+        
         if (value === 'C') {
             display.value = ''; // Clear the display
         } else if (value === '=') {
