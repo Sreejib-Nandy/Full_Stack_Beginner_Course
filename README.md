@@ -13,8 +13,7 @@ This repository contains a **beginner-friendly full stack web development course
 * JavaScript
 * React
 * Node.js
-* SQL
-* Git & GitHub
+* MongoDB
 
 ---
 
